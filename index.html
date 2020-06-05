@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body,html{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container{
+            width:100vw;
+            height:100%;
+            box-sizing: border-box;
+            background-color: #eeeeee;
+            display: flex;
+        }
+        .left{
+            flex: 1;
+            height: 100%;
+            background-color:dodgerblue;
+            background-image: url('https://picsum.photos/seed/pvnvicsum/800/800');
+            background-size: cover;
+            display: flex;
+        }
+        .logo{
+            font-size: 5rem;
+            font-weight: 700;
+            margin: auto;
+            color: white;
+            transform: scale(0.9);
+            opacity: 0.5;
+            animation: logo 1s ease-in-out infinite alternate-reverse both;
+        }
+
+        @keyframes logo {
+            from{transform:scale(0.9);opacity:0.5;}
+            to{transform: scale(1);opacity: 1;}
+        }
+
+
+        .right{
+            flex: 2;
+            height:100%;
+            background-color:white;
+            box-sizing: border-box;
+            padding:20px;
+        }
+        .right h1{
+            font-weight:700;
+            font-size:3rem;
+            padding-left:50px;
+            color:#7198a6;
+
+        }
+
+        .form-grid{
+            /* background-color: #eee; */
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .form-input{
+            /* background-color: #ccc; */
+            padding: 20px;
+            margin: 10px;
+            position: relative;
+            max-width:400px;
+        }
+        .form-input input{
+            display: block;
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            padding-left: 10px;
+            border:none;
+            outline: none;
+            box-shadow: 0px 2px 1px 0px #eeeeee;
+            transition:all .3s ease-in-out;
+        }
+        .form-input label{
+            position: absolute;
+            top:32px;
+            left: 30px;
+            font-size: 20px;
+            color: #cccccc;
+            transition:all .3s ease-in-out;
+            pointer-events: none;
+
+        }
+        .form-input input:valid,
+        .form-input input:focus {
+            box-shadow: 0px 2px 0px 0px #7198a6;
+        }
+
+        .form-input input:valid  ~  label ,
+        .form-input input:focus  ~  label {
+            top:0px;
+            font-size: 15px;
+            color: #7198a6;
+
+        }
+
+        .form-input input[type="submit"]{
+            background-color: #181e1e;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="left">
+           <div class="logo">
+               LOGO
+           </div>
+       </div>
+       <div class="right">
+           <h1>Signup</h1>
+           <form class="form-grid">
+               <div class="form-input">
+                   <input type="text" name="" id="" required>
+                   <label for="">First Name</label>
+               </div>
+               <div class="form-input">
+                <input type="text" name="" id="" required>
+                <label for="">Last Name</label>
+               </div>
+               <div class="form-input">
+                <input type="text" name="" id="" required>
+                <label for="">Email</label>
+               </div>
+               <div class="form-input">
+                <input type="text" name="" id="" required>
+                <label for="">Phone</label>
+               </div>
+               <div class="form-input">
+                <input type="password" name="" id="" required>
+                <label for="">Password</label>
+               </div>
+               <div class="form-input">
+                <input type="password" name="" id="" required>
+                <label for="">Confirm Password</label>
+               </div>
+               <div class="form-input">
+                <input type="submit" name="" id="" value="Create Account">
+              
+               </div>
+               <div class="form-input">
+                   <span>Already have an account</span>
+                <a href="">Sign in</a>
+               </div>
+           </form>
+           
+       </div>
+   </div>
+</body>
+</html>
